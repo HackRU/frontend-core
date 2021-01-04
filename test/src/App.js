@@ -1,7 +1,8 @@
+import Test from "@hackru/frontend-core";
 function App() {
     return (
         <div>
-            Does this work?
+            <Test />
         </div>
     );
 }
