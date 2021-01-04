@@ -1,4 +1,4 @@
-import sass from "rollup-plugin-sass";
+import scss from "rollup-plugin-scss";
 import babel from "rollup-plugin-babel";
 
 import pkg from "./package.json";
@@ -17,11 +17,9 @@ export default {
             exclude: "node_modules/**",
             presets: [
                 ["@babel/preset-react", {modules: false}]
-            ] 
+            ]
         }),
-        sass({
-            insert: true
-        })
+        scss()
     ],
     external: [
         "react",
