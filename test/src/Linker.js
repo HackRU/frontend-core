@@ -1,9 +1,7 @@
-import Test from "@hackru/frontend-core";
-
 const LINKER = {
-    "MODULE-A": <h1>This is module a</h1>,
-    "MODULE-B": <h2>This is module b</h2>,
-    "MODULE-C": <Test />
+    "MODULE-A": (id, text) => (<h1 id={id}>{text}</h1>),
+    "MODULE-B": (id, text) => (<h2 id={id}>{text}</h2>),
+    "MODULE-C": (id, text) => (<p id={id}>{text}</p>)
 }
 
 export default LINKER
