@@ -1,9 +1,10 @@
-import Test from "@hackru/frontend-core";
+import render from "@hackru/frontend-core";
+import Linker from "./Linker";
+import Config from "./Config";
+
 function App() {
     return (
-        <div>
-            <Test />
-        </div>
+        render(Linker, Config)
     );
 }
 
