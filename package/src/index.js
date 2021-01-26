@@ -2,7 +2,7 @@ import React from "react";
 
 
 const render = (Linker, Config) => {
-    return Config.map((link, index) => Linker[link.module](index, link.params.text, render(Linker, link.children)))
+    return Config.map((link, index) => Linker[link.module](index, link.params, render(Linker, link.children)))
     
 }
 
