@@ -1,9 +1,9 @@
 const LINKER = {
-    "MODULE-A": (id, text, children) => (<h1 id={id}>{text}{children}</h1>),
-    "MODULE-B": (id, text, children) => (<h2 id={id}>{text}{children}</h2>),
-    "MODULE-C": (id, text, children) => (<p id={id}>{text}{children}</p>),
-    "MODULE-D": (id, text, children) => (<div id={id}>{text}{children} </div>),
-    "MODULE-E": (id, text, children) => (<a id={id} href={text}>{children}</a>)
+    "MODULE-A": (id, params, children) => (<h1 id={id}>{params.text}{children}</h1>),
+    "MODULE-B": (id, params, children) => (<h2 id={id}>{params.text}{children}</h2>),
+    "MODULE-C": (id, params, children) => (<p id={id}>{params.text}{children}</p>),
+    "MODULE-D": (id, params, children) => (<div id={id}>{params.text}{children} </div>),
+    "MODULE-E": (id, params, children) => (<a id={id} href={params.href}>{children}</a>)
 }
 
 export default LINKER

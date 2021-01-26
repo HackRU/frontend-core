@@ -69,7 +69,7 @@ const CONFIG = [
     {
         "module": "MODULE-E",
         "params": {
-            "text":  "https://hackru.org/"
+            "href":  "https://hackru.org/"
         },
         "children": [
             {
