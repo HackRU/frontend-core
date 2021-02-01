@@ -1,17 +1,4 @@
-import React from "react";
+import Renderer from "./core-renderer";
+import ModuleWrapper from "./module-wrapper";
 
-
-const render = (Linker, Config) => {
-    return Config.map((link, index) => Linker[link.module](index, link.params, render(Linker, link.children)))
-    
-}
-
-const Main = (Linker, Config) => {
-    return(
-        <div>
-            {render(Linker, Config)}
-        </div>
-    );
-}
-
-export default Main;
+export { Renderer, ModuleWrapper};
