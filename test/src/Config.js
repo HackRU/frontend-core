@@ -80,6 +80,13 @@ const CONFIG = [
                 "children": []
             }
         ]
+    },
+    {
+        "module": "MODULE-F",
+        "params": {
+            "text":  "wrapped module"
+        },
+        "children": []
     }
 ]
 

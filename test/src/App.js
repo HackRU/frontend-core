@@ -1,10 +1,10 @@
-import render from "@hackru/frontend-core";
+import { Renderer } from "@hackru/frontend-core";
 import Linker from "./Linker";
 import Config from "./Config";
 
 function App() {
     return (
-        render(Linker, Config)
+        Renderer(Linker, Config)
     );
 }
 
