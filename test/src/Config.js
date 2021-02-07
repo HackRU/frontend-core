@@ -1,93 +1,93 @@
 const CONFIG = [
     {
-        
-        "module": "MODULE-A",
-        "params": {
-            "text": "This is module-a",
+        module: "MODULE-A",
+        params: {
+            text: "This is module-a",
         },
-        "children": [
+        children: [
             {
-                "module": "MODULE-C",
-                "params": {
-                    "text":  "module c"
+                module: "MODULE-C",
+                params: {
+                    text: "module c",
                 },
-                "children": []
+                children: [],
             },
             {
-                "module": "MODULE-B",
-                "params": {
-                    "text":  "module b"
+                module: "MODULE-B",
+                params: {
+                    text: "module b",
                 },
-                "children": []
+                children: [],
             },
             {
-                "module": "MODULE-C",
-                "params": {
-                    "text":  "module c"
+                module: "MODULE-C",
+                params: {
+                    text: "module c",
                 },
-                "children": []
-            }
-        ]
+                children: [],
+            },
+        ],
     },
     {
-        "module": "MODULE-C",
-        "params": {
-            "text":  "module c"
+        module: "MODULE-C",
+        params: {
+            text: "module c",
         },
-        "children": []
+        children: [],
     },
     {
-        "module": "MODULE-B",
-        "params": {
-            "text":  "module b"
+        module: "MODULE-B",
+        params: {
+            text: "module b",
         },
-        "children": []
+        children: [],
     },
     {
-        "module": "MODULE-D",
-        "params": {
-            "text":  "parent"
+        module: "MODULE-D",
+        params: {
+            text: "parent",
         },
-        "children": [
+        children: [
             {
-                "module": "MODULE-D",
-                "params": {
-                    "text":  "child of parent"
+                module: "MODULE-D",
+                params: {
+                    text: "child of parent",
                 },
-                "children": [
+                children: [
                     {
-                        "module": "MODULE-D",
-                        "params": {
-                            "text":  "child of child"
+                        module: "MODULE-D",
+                        params: {
+                            text: "child of child",
                         },
-                        "children": []
-                    }
-                ]
-            }
-        ]
+                        children: [],
+                    },
+                ],
+            },
+        ],
     },
     {
-        "module": "MODULE-E",
-        "params": {
-            "href":  "https://hackru.org/"
+        module: "MODULE-E",
+        params: {
+            href: "https://hackru.org/",
         },
-        "children": [
+        children: [
             {
-                "module": "MODULE-A",
-                "params": {
-                    "text":  "Link to HackRU"
+                module: "MODULE-A",
+                params: {
+                    text: "Link to HackRU",
                 },
-                "children": []
-            }
-        ]
+                children: [],
+            },
+        ],
     },
     {
-        "module": "MODULE-F",
-        "params": {
-            "text":  "wrapped module"
+        module: "MODULE-F",
+        params: {
+            text: "wrapped module",
+            logout: "Logout",
         },
-        "children": []
-    }
-]
+        children: [],
+    },
+];
 
-export default CONFIG
+export default CONFIG;

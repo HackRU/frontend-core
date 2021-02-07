@@ -3,9 +3,7 @@ import Linker from "./Linker";
 import Config from "./Config";
 
 function App() {
-    return (
-        Renderer(Linker, Config)
-    );
+    return Renderer(Linker, Config);
 }
 
 export default App;

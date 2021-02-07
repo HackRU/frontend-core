@@ -1,23 +1,23 @@
 import React from "react";
 
-const Test = (user, events, params)  => {
+const Test = (defaults, params, Profile) => {
+    console.log(defaults, params, Profile);
     return (
         <div>
             <div>
-                {user.name + " "}
-                {user.email}
+                {defaults.user.name + " "}
+                {defaults.user.email}
             </div>
             {params.text}
+            <button
+                onClick={() => {
+                    Profile.logout();
+                }}
+            >
+                Qwerty
+            </button>
         </div>
-    )
-}
+    );
+};
 
-// const module_definition = {
-//     "expected_inputs": [
-//         "user",
-//         "events.logout"
-//     ]
-// }
-
-// export { Test, module_definition };
 export { Test };
