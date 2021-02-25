@@ -1,14 +1,14 @@
 import React from "react";
 import { CoreModule } from "@hackru/frontend-core";
 
-const Test = CoreModule(({ text, logout }) => {
+const Test = CoreModule(({ text, logout, children }) => {
     return (
         <div>
             <button
                 onClick={() => {
                     logout();
                 }}>
-                    {text}
+                    {text}{children}
             </button>
         </div>
     );
