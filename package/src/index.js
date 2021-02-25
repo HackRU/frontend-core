@@ -1,4 +1,5 @@
 import Renderer from "./core-renderer";
-import ModuleWrapper from "./module-wrapper";
+import CoreModule from "./module-wrapper";
+import { Provider as CoreProvider } from "./core-provider";
 
-export { Renderer, ModuleWrapper};
+export { Renderer, CoreModule, CoreProvider };

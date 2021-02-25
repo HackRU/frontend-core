@@ -1,23 +1,17 @@
 import React from "react";
+import { CoreModule } from "@hackru/frontend-core";
 
-const Test = (defaults, params, Profile) => {
-    console.log(defaults, params, Profile);
+const Test = CoreModule(({ text, logout }) => {
     return (
         <div>
-            <div>
-                {defaults.user.name + " "}
-                {defaults.user.email}
-            </div>
-            {params.text}
             <button
                 onClick={() => {
-                    Profile.logout();
-                }}
-            >
-                Qwerty
+                    logout();
+                }}>
+                    {text}
             </button>
         </div>
     );
-};
+}, ["text", "logout"]);
 
 export { Test };
