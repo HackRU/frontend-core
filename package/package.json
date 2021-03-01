@@ -1,6 +1,6 @@
 {
     "name": "@hackru/frontend-core",
-    "version": "1.0.2",
+    "version": "1.0.0",
     "description": "HackRU frontend core module linker",
     "author": "shivanmodha",
     "license": "MIT",
