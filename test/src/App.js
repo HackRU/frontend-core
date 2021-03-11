@@ -2,12 +2,6 @@ import { CoreProvider } from "@hackru/frontend-core";
 import { Test } from "./testModule";
 
 function App() {
-    /* Test code to see if URL is being parsed correctly
-    let url = window.location.search.substring(1)
-    if(url) {
-        let parsedURL = JSON.parse('{"' + decodeURI(url).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"') + '"}')
-        console.log(parsedURL)
-    } */
     let i = 0;
     return (
         <CoreProvider Store={{
