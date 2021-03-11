@@ -28,6 +28,10 @@ const CoreProvider = ({ Store, Linker, children }) => {
 };
 
 const CoreModule = (ReactComponent, ExpectedInputs) => {
+    let url = window.location.search.substring(1)
+    if(url) {
+        let urlParams = JSON.parse('{"' + decodeURI(url).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"') + '"}')
+    }
     return (id, params, children) => {
         // resolve parameters
         let properties = {
@@ -44,6 +48,9 @@ const CoreModule = (ReactComponent, ExpectedInputs) => {
                 properties[key] = _store[key];
             }
             // todo: override the given configuration parameters with url parameters
+            if (urlParams[key]) {
+                properties[key] = urlParams[key];
+            }
         }
         // render the component
         return (
