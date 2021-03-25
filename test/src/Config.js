@@ -22,6 +22,30 @@ const CONFIG = [
         },
         children: [],
     },
+    {
+        module: "MODULE-G",
+        params: {
+            text: "Click to Login",
+            garbage: "YAS"
+        },
+        children: [],
+    },
+    {
+        module: "MODULE-H",
+        params: {
+            text: "Test Login",
+            garbage: "YAS"
+        },
+        children: [],
+    },
+    {
+        module: "MODULE-I",
+        params: {
+            text: "Test Logout",
+            garbage: "YAS"
+        },
+        children: [],
+    },
 ];
 
 export default CONFIG;
