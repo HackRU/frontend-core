@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CoreModule, Profile } from '@hackru/frontend-core';
+import { CoreModule } from '@hackru/frontend-core';
 
 const Login = CoreModule(({text, profile, children}) => {
     
