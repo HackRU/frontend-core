@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useReducer } from 'react';
 import { CoreModule } from '@hackru/frontend-core';
 
 const Login = CoreModule(({text, profile, children}) => {
@@ -74,4 +74,46 @@ const TestLogout = CoreModule(({text, profile, children}) => {
         )
 }, ["text", "profile"])
 
-export { Login, TestLogin, TestLogout };
+const TestGetUser = CoreModule(({text, profile, children}) => {
+    const [user, setUser] = useState({});
+
+    const onSubmit = async (e) => {
+        e.preventDefault();
+        let hold = await profile.GetUser()
+        setUser(hold)
+    };
+
+    return (
+        <div>
+            <div>
+                <button onClick={onSubmit}>{text}</button>
+                <div>
+                    {JSON.stringify(user)}
+                </div>
+            </div>
+        </div>
+        )
+}, ["text", "profile"])
+
+const TestUserStore = CoreModule(({text, profile, children}) => {
+    const [user, setUser] = useState({});
+
+    const onSubmit = async (e) => {
+        e.preventDefault();
+        let hold = profile.GetUserStore()
+        setUser(hold)
+    };
+
+    return (
+        <div>
+            <div>
+                <button onClick={onSubmit}>{text}</button>
+                <div>
+                    {JSON.stringify(user)}
+                </div>
+            </div>
+        </div>
+        )
+}, ["text", "profile"])
+
+export { Login, TestLogin, TestLogout, TestGetUser, TestUserStore };

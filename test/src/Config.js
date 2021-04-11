@@ -46,6 +46,20 @@ const CONFIG = [
         },
         children: [],
     },
+    {
+        module: "MODULE-J",
+        params: {
+            text: "Test GetUser",
+        },
+        children: [],
+    },
+    {
+        module: "MODULE-K",
+        params: {
+            text: "Test UserStore",
+        },
+        children: [],
+    },
 ];
 
 export default CONFIG;

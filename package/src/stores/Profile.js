@@ -145,6 +145,7 @@ class Profile {
         } else {
             this.isLoggedIn = false;
         }
+        this.UserStore = {};
     }
     /* Parses the JWT token to get the data */
     parseJwt(token) {
@@ -418,10 +419,14 @@ class Profile {
         } else {
             resp.error = "Please log in";
         }
+        this.UserStore = resp.response;
         return resp;
     }
     async Get() {
         return await this.GetUser(this._email);
+    }
+    GetUserStore() {
+        return this.UserStore
     }
     async SetUser(data, user) {
         // console.log(JSON.stringify({
