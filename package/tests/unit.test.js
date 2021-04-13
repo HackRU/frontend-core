@@ -1,5 +1,5 @@
 import React from 'react';
-import { CoreModule, CoreProvider } from "./index";
+import { CoreModule, CoreProvider } from "../src/index";
 import renderer from 'react-test-renderer';
 
 const Test = CoreModule(({ text, logout, children }) => {

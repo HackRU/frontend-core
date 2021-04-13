@@ -48,3 +48,9 @@ typings/
 dist
 
 bin/
+
+#Testing
+package/tests/__snapshots__
+
+#MacOS
+**/.DS_Store
