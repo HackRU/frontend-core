@@ -6,6 +6,10 @@ import { Profile } from './stores/Profile';
 
 let _store = {};
 let profile = new Profile();
+let default_provided = {
+    profile: profile
+}
+
 
 
 const CoreProvider = ({ Store, Linker, children }) => {
@@ -27,7 +31,12 @@ const CoreProvider = ({ Store, Linker, children }) => {
     }
     // populate the _store object with the default defined stores
     _store = Store;
-    _store.profile = profile
+    Object.keys(default_provided).forEach(provided => {
+        if (!_store[provided]) {
+            _store[provided] = default_provided[provided]
+        }
+    });
+    
     return recursiveRender(Linker, children, "root")
 };
 

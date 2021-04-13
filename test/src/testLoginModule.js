@@ -1,4 +1,4 @@
-import React, { useState, useReducer } from 'react';
+import React, { useState } from 'react';
 import { CoreModule } from '@hackru/frontend-core';
 
 const Login = CoreModule(({text, profile, children}) => {
