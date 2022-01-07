@@ -6,8 +6,8 @@ import PropTypes from "prop-types";
  */
 const BASE =
     process.env.REACT_APP_MODE && process.env.REACT_APP_MODE === "development"
-        ? defaults.rest.dev
-        : defaults.rest.prod;
+        ? defaults.rest.prod
+        : defaults.rest.dev;
 const ENDPOINTS = {
     /**
      * Default login url
